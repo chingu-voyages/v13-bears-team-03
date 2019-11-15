@@ -1,33 +1,14 @@
 import React from 'react';
+import SignIn from './components/Sign-In'
+import SignUp from './components/Sign-Up'
 import './App.css';
 
 export default () => {
   return (
-    <h1>Hello World!</h1>
+    <>
+      <h1>Hello World!</h1>
+      <SignIn />
+      <SignUp />
+    </>
   )
 }
-
-// class App extends Component {
-//   state = { cities: [] }
-
-//   async componentDidMount() {
-//     const response = await fetch('/cities')
-//     const cities = await response.json()
-
-//     this.setState({ cities: cities })
-//   }
-
-//   render() {
-//     return (
-//       <div>
-//         <ul>
-//           {this.state.cities.map(city => {
-//             return <li key={city.name}> <b>{city.name}</b>: {city.population}</li>
-//           })}
-//         </ul>
-//       </div>
-//     );
-//   }
-// }
-
-// export default App;
