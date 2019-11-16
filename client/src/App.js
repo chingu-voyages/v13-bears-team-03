@@ -1,8 +1,7 @@
 import React from 'react';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import Header from './components/Header'
-import SignIn from './components/Sign-In'
-import SignUp from './components/Sign-Up'
+import { SignUp, SignIn } from './components/Authentication'
 import './App.css';
 
 export default () => {
