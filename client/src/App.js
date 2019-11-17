@@ -1,35 +1,22 @@
+  
 import React from 'react';
+import { BrowserRouter, Route, Switch } from 'react-router-dom';
+import Header from './components/Header'
+import { SignUp, SignIn } from './components/Authentication'
 import './App.css';
 
 export default () => {
   return (
-    <div>
-    <h1>Hello World!</h1>
-    test</div>
-    )
+    <BrowserRouter>
+      <Header />
+      <Switch>
+        <Route path="/sign-in">
+          <SignIn />
+        </Route>
+        <Route path="/sign-up">
+          <SignUp />
+        </Route>
+      </Switch>
+    </BrowserRouter>
+  )
 }
-
-// class App extends Component {
-//   state = { cities: [] }
-
-//   async componentDidMount() {
-//     const response = await fetch('/cities')
-//     const cities = await response.json()
-
-//     this.setState({ cities: cities })
-//   }
-
-//   render() {
-//     return (
-//       <div>
-//         <ul>
-//           {this.state.cities.map(city => {
-//             return <li key={city.name}> <b>{city.name}</b>: {city.population}</li>
-//           })}
-//         </ul>
-//       </div>
-//     );
-//   }
-// }
-
-// export default App;
