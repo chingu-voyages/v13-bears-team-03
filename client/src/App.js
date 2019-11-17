@@ -1,22 +1,15 @@
   
 import React from 'react';
-import { BrowserRouter, Route, Switch } from 'react-router-dom';
+import { BrowserRouter, Route } from 'react-router-dom';
 import Header from './components/Header'
-import { SignUp, SignIn } from './components/Authentication'
+import VehicleList from './components/UserLandingPage/VehicleList'
 import './App.css';
 
 export default () => {
   return (
     <BrowserRouter>
       <Header />
-      <Switch>
-        <Route path="/sign-in">
-          <SignIn />
-        </Route>
-        <Route path="/sign-up">
-          <SignUp />
-        </Route>
-      </Switch>
+          <Route exact path="/landing_page" component={ VehicleList } />
     </BrowserRouter>
   )
 }
