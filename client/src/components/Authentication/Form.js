@@ -1,7 +1,8 @@
 import React from 'react'
-import Form from 'react-bootstrap/Form'
+import TextField from './TextField'
+import RBForm from 'react-bootstrap/Form'
 import Button from 'react-bootstrap/Button'
-import { Formik } from 'formik'
+import { Formik, Form } from 'formik'
 
 export default ({ schema, type }) => {
     return (
@@ -14,63 +15,38 @@ export default ({ schema, type }) => {
                 password: '',
             }}
         >
-            {({
-                handleSubmit,
-                handleChange,
-                handleBlur,
-                values,
-                touched,
-                isValid,
-                errors,
-            }) => (
-                    <Form noValidate onSubmit={handleSubmit}>
-                        {type === 'sign-up' &&
-                            <Form.Group controlId="validationFormik02">
-                                <Form.Label>Username</Form.Label>
-                                <Form.Control
-                                    type="text"
-                                    placeholder="Enter username"
-                                    name="username"
-                                    value={values.username}
-                                    onChange={handleChange}
-                                    // isValid={touched.username && !errors.username}
-                                    isInvalid={!!errors.username}
-                                />
-                            </Form.Group>
-                        }
+            <RBForm noValidate as={Form}>
+                {type === 'sign-up' &&
+                    <TextField
+                        label="Username"
+                        name="username"
+                        type="text"
+                        placeholder="Enter your username"
+                    />
+                }
 
-                        <Form.Group controlId="validationFormik01">
-                            <Form.Label>Email address</Form.Label>
-                            <Form.Control
-                                type="email"
-                                placeholder="Enter email"
-                                name="email"
-                                value={values.email}
-                                onChange={handleChange}
-                                isInvalid={!!errors.email}
-                            />
-                            <Form.Text className="text-muted">
-                                We'll never share your email with anyone else.
-                            </Form.Text>
-                        </Form.Group>
+                <TextField
+                    label="Email Address"
+                    name="email"
+                    type="email"
+                    placeholder="Enter your email"
+                >
+                    <RBForm.Text className="text-muted">
+                        We'll never share your email with anyone else.
+                    </RBForm.Text>
+                </TextField>
 
-                        <Form.Group controlId="validationFormik03">
-                            <Form.Label>Password</Form.Label>
-                            <Form.Control
-                                type="password"
-                                placeholder="Password"
-                                name="password"
-                                value={values.password}
-                                onChange={handleChange}
-                                isInvalid={!!errors.password}
-                            />
-                        </Form.Group>
+                <TextField
+                    label="Password"
+                    name="password"
+                    type="password"
+                    placeholder="Enter your Password"
+                />
 
-                        <Button variant="primary" type="submit">
-                            {type === "sign-up" ? "Sign Up" : "Sign In"}
-                        </Button>
-                    </Form>
-                )}
+                <Button variant="primary" type="submit">
+                    {type === "sign-up" ? "Sign Up" : "Sign In"}
+                </Button>
+            </RBForm>
         </Formik>
     )
 }
