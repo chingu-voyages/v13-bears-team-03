@@ -1,8 +1,8 @@
-import React from 'react';
-import { BrowserRouter, Route, Switch } from 'react-router-dom';
+import React from 'react'
+import { BrowserRouter, Route, Switch } from 'react-router-dom'
 import Header from './components/Header'
 import { SignUp, SignIn } from './components/Authentication'
-import './App.css';
+import Account from './components/Account'
 
 export default () => {
   return (
@@ -14,6 +14,9 @@ export default () => {
         </Route>
         <Route path="/sign-up">
           <SignUp />
+        </Route>
+        <Route path="/account">
+          <Account />
         </Route>
       </Switch>
     </BrowserRouter>
