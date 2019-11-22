@@ -18,7 +18,11 @@ const schema = {
 
 export const SignUp = () => (
     <Layout>
-        <Form type={"sign-up"} schema={object(schema)} />
+        <Form
+            schema={object(schema)}
+            init={{ username: '', email: '', password: '' }}
+            button={'Sign Up'}
+        />
     </Layout>
 )
 
@@ -26,7 +30,11 @@ export const SignIn = () => {
     const { email, password } = schema
     return (
         < Layout >
-            <Form type={"sign-in"} schema={object({ email, password })} />
+            <Form
+                schema={object({ email, password })}
+                init={{ email: '', password: '' }}
+                button={'Sign In'}
+            />
         </Layout >
     )
 }

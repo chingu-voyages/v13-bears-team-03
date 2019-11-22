@@ -4,47 +4,37 @@ import RBForm from 'react-bootstrap/Form'
 import Button from 'react-bootstrap/Button'
 import { Formik, Form } from 'formik'
 
-export default ({ schema, type }) => {
+export default ({ init, button, schema }) => {
     return (
         <Formik
             validationSchema={schema}
             onSubmit={console.log}
-            initialValues={{
-                username: '',
-                email: '',
-                password: '',
-            }}
+            initialValues={init}
         >
             <RBForm noValidate as={Form}>
-                {type === 'sign-up' &&
-                    <TextField
-                        label="Username"
-                        name="username"
-                        type="text"
-                        placeholder="Enter your username"
-                    />
+                {
+                    Object.keys(init).map(val => {
+                        const type = val === 'email' || val === 'password' ? val : 'text'
+                        let label = val[0].toUpperCase() + val.slice(1)
+                        return (
+                            <React.Fragment key={val}>
+                                <TextField
+                                    label={label}
+                                    name={val.replace(' ', '')}
+                                    type={type}
+                                    placeholder={`Enter your ${val.toLocaleLowerCase()}`}
+                                />
+                                {type === 'email' &&
+                                    <RBForm.Text className="text-muted">
+                                        We'll never share your email with anyone else.
+                                    </RBForm.Text>
+                                }
+                            </React.Fragment>
+                        )
+                    })
                 }
-
-                <TextField
-                    label="Email Address"
-                    name="email"
-                    type="email"
-                    placeholder="Enter your email"
-                >
-                    <RBForm.Text className="text-muted">
-                        We'll never share your email with anyone else.
-                    </RBForm.Text>
-                </TextField>
-
-                <TextField
-                    label="Password"
-                    name="password"
-                    type="password"
-                    placeholder="Enter your Password"
-                />
-
                 <Button variant="primary" type="submit">
-                    {type === "sign-up" ? "Sign Up" : "Sign In"}
+                    {button}
                 </Button>
             </RBForm>
         </Formik>
