@@ -4,7 +4,7 @@ import RBForm from 'react-bootstrap/Form'
 import Button from 'react-bootstrap/Button'
 import { Formik, Form } from 'formik'
 
-export default ({ init, button, schema }) => {
+export default ({ button, fields, init, schema }) => {
     return (
         <Formik
             validationSchema={schema}
@@ -13,22 +13,22 @@ export default ({ init, button, schema }) => {
         >
             <RBForm noValidate as={Form}>
                 {
-                    Object.keys(init).map(val => {
-                        const type = val === 'email' || val === 'password' ? val : 'text'
-                        let label = val[0].toUpperCase() + val.slice(1)
+                    fields.map(field => {
+                        const { label, name, placeholder, type } = field
                         return (
-                            <React.Fragment key={val}>
+                            <React.Fragment key={name}>
                                 <TextField
                                     label={label}
-                                    name={val.replace(' ', '')}
+                                    name={name}
                                     type={type}
-                                    placeholder={`Enter your ${val.toLocaleLowerCase()}`}
-                                />
-                                {type === 'email' &&
-                                    <RBForm.Text className="text-muted">
-                                        We'll never share your email with anyone else.
+                                    placeholder={placeholder}
+                                >
+                                    {type === 'email' &&
+                                        <RBForm.Text className="text-muted">
+                                            We'll never share your email with anyone else.
                                     </RBForm.Text>
-                                }
+                                    }
+                                </TextField>
                             </React.Fragment>
                         )
                     })
