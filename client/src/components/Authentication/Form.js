@@ -4,12 +4,16 @@ import RBForm from 'react-bootstrap/Form'
 import Button from 'react-bootstrap/Button'
 import { Formik, Form } from 'formik'
 
-export default ({ button, fields, init, schema }) => {
+export default ({ button, fields, formName, init, schema }) => {
+    const setInitVal = (key, initValObj) => {
+        return JSON.parse(localStorage.getItem(key)) || initValObj
+    }
+
     return (
         <Formik
             validationSchema={schema}
-            onSubmit={console.log}
-            initialValues={init}
+            onSubmit={obj => localStorage.setItem(formName, JSON.stringify(obj))}
+            initialValues={setInitVal(formName, init)}
         >
             <RBForm noValidate as={Form}>
                 {

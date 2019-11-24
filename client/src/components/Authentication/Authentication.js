@@ -1,7 +1,7 @@
 import React from 'react'
 import Layout from './Layout'
 import Form from './Form'
-import { string, object } from 'yup'
+import { object, string } from 'yup'
 
 const schema = {
     username: string()

@@ -1,8 +1,21 @@
 import React from 'react'
 import { Form, Layout } from '../Authentication'
-import { object } from 'yup'
+import { object, string } from 'yup'
 
-const schema = ''
+const schema = {
+    username: string()
+        .max(15, 'Must be 15 characters or less')
+        .required('Required'),
+    firstName: string()
+        .max(20, 'Must be 20 characters or less')
+        .required('Required'),
+    lastName: string()
+        .max(20, 'Password must contain 20 characters or less')
+        .required('Required'),
+    city: string()
+        .max(20, 'Password must contain 20 characters or less')
+        .required('Required'),
+}
 
 export default () => {
     return (
@@ -10,6 +23,7 @@ export default () => {
             <Layout>
                 <h1>Account Page</h1>
                 <Form
+                    formName='account'
                     schema={object(schema)}
                     init={{
                         username: '',
