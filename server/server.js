@@ -1,6 +1,9 @@
 import bodyParser from 'body-parser'
 import express from 'express'
 import path from 'path'
+import {initDB, Vehicles} from './seed_data'
+import mongoose from 'mongoose';
+
 const app = express()
 
 app.use(bodyParser.json())
@@ -11,13 +14,17 @@ const router = express.Router()
 const staticFiles = express.static(path.join(__dirname, '../../client/build'))
 app.use(staticFiles)
 
-router.get('/cities', (req, res) => {
-  const cities = [
-    {name: 'New York City', population: 8175133},
-    {name: 'Los Angeles',   population: 3792621},
-    {name: 'Chicago',       population: 2695598}
-  ]
-  res.json(cities)
+// Initiating mock data
+initDB();
+
+router.get('/vehicles', (req, res) => {
+  Vehicles.find((error, vehicles)=>{
+    if(error){
+      console.log(error);
+      return handleError(error);
+    }
+    res.json(vehicles)
+  });  
 })
 
 app.use(router)
