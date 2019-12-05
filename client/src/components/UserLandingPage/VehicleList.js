@@ -1,10 +1,8 @@
 import React from 'react'
 import { Component } from 'react';
 import { CardColumns } from 'react-bootstrap';
-import { Form } from 'react-bootstrap';
+import { Form, Pagination } from 'react-bootstrap';
 import VehicleCard from './VehicleCard'
-import PageList from './PageList'
-// import SearchBar from './SearchBar'
 // import trucks1 from './FetchVariable'
 import trucks2 from './TrucksList.json'
 
@@ -12,7 +10,9 @@ class VehicleList extends Component {
 
   state = {
     trucks2: trucks2,
-    search_result: []
+    search_result: [],
+    active: 1,
+    display_page: 10
   }
 
   triggerList = () => {
@@ -24,14 +24,28 @@ class VehicleList extends Component {
     }
   }
 
-  filterList = (event) => {
+  pageChange = (event) => {
+    this.setState({ active: parseInt(event.target.innerText, 10) }) 
+  }
 
+  pagination = () => {
+    let items = []
+    for (let number = 1; number <= Math.ceil(this.triggerList().length/10); number++) {
+      items.push(
+        <Pagination.Item key={number} active={number === this.state.active}>
+          {number}
+        </Pagination.Item>,
+      );
+    }
+
+    return items
+  }
+
+  filterList = (event) => {
     let items = trucks2.filter((item) => {
       return item.vehicle_model.toLowerCase().search(event.target.value.toLowerCase()) !== -1;
     });
-
     this.setState({ search_result: items })
-
   }
 
   handleOnChange = event => {
@@ -66,14 +80,14 @@ class VehicleList extends Component {
           <div className="container">
             <div className="row" >
               <div className="col-md-12" align="left">
-                {trucks}
+                {trucks.slice(this.state.display_page * (this.state.active-1), this.state.display_page * this.state.active )}
               </div>
             </div>
           </div>
         </CardColumns>
 
         <div className="row justify-content-center">
-          <PageList />
+        <Pagination onClick={this.pageChange} size="lg">{this.pagination()}</Pagination>
         </div>
 
       </div>
