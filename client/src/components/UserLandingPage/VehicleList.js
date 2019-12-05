@@ -4,6 +4,8 @@ import { CardColumns } from 'react-bootstrap';
 import VehicleCard from './VehicleCard'
 import PageList from './PageList'
 import SearchBar from './SearchBar'
+import trucks1 from './FetchVariable'
+import trucks2 from './TrucksList.json'
 
 class VehicleList extends Component {
 
@@ -29,6 +31,7 @@ class VehicleList extends Component {
                 </div>
           <br />
           <CardColumns>
+            {console.log(trucks1)}
             <div className="container">
               <div className="row" >
                 <div className="col-md-12" align="left"> 

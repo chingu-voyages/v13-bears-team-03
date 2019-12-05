@@ -1,0 +1,156 @@
+[
+    {
+    "vehicle_type": [
+    "truck"
+    ],
+    "_id": "5ddaf6b73b66bc0023b93e29",
+    "vehicle_model": "Tesla",
+    "vehicle_price": 674,
+    "description": "this is a great car",
+    "imageUrl": "https://s29755.pcdn.co/wp-content/uploads/2019/08/2019_Top_Five_Class_5-Mack.jpg",
+    "__v": 0
+    },
+    {
+    "vehicle_type": [
+    "truck"
+    ],
+    "_id": "5ddaf6b73b66bc0023b93e2a",
+    "vehicle_model": "Agrale Marruá",
+    "vehicle_price": 329,
+    "description": "this is a great car",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ec/Marr%C3%BAa-EJE.jpg/180px-Marr%C3%BAa-EJE.jpg",
+    "__v": 0
+    },
+    {
+    "vehicle_type": [
+    "truck"
+    ],
+    "_id": "5ddaf6b73b66bc0023b93e2b",
+    "vehicle_model": "VAZ-2329",
+    "vehicle_price": 465,
+    "description": "this is a great car",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ea/VAZ-2329-1_pickup.jpg/180px-VAZ-2329-1_pickup.jpg",
+    "__v": 0
+    },
+    {
+    "vehicle_type": [
+    "truck"
+    ],
+    "_id": "5ddaf6b73b66bc0023b93e2c",
+    "vehicle_model": "Bremach T-Rex",
+    "vehicle_price": 621,
+    "description": "this is a great car",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b6/Bremach_Trex.jpg/180px-Bremach_Trex.jpg",
+    "__v": 0
+    },
+    {
+    "vehicle_type": [
+    "truck"
+    ],
+    "_id": "5ddaf6b73b66bc0023b93e2d",
+    "vehicle_model": "Chang'an Star Truck",
+    "vehicle_price": 324,
+    "description": "this is a great car",
+    "imageUrl": "https://en.wikipedia.org/wiki/File:Chang%27an_fish_carrier_at_a_restaurant_in_Miyun_(20150215120552).JPG",
+    "__v": 0
+    },
+    {
+    "vehicle_type": [
+    "truck"
+    ],
+    "_id": "5ddaf6b73b66bc0023b93e2e",
+    "vehicle_model": "Chevrolet Colorado/S-10",
+    "vehicle_price": 334,
+    "description": "this is a great car",
+    "imageUrl": "https://en.wikipedia.org/wiki/File:Brazilian_2012_All-New_Chevy_S10.jpg",
+    "__v": 0
+    },
+    {
+    "vehicle_type": [
+    "truck"
+    ],
+    "_id": "5ddaf6b73b66bc0023b93e2f",
+    "vehicle_model": "Chevrolet D-Max",
+    "vehicle_price": 726,
+    "description": "this is a great car",
+    "imageUrl": "https://en.wikipedia.org/wiki/File:Dmax_2011_ls_3.0_td.jpg",
+    "__v": 0
+    },
+    {
+    "vehicle_type": [
+    "truck"
+    ],
+    "_id": "5ddaf6b73b66bc0023b93e30",
+    "vehicle_model": "Chevrolet LSSV (Milverado)",
+    "vehicle_price": 223,
+    "description": "this is a great car",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c2/MP_MilCOTS.jpg/180px-MP_MilCOTS.jpg",
+    "__v": 0
+    },
+    {
+    "vehicle_type": [
+    "truck"
+    ],
+    "_id": "5ddaf6b73b66bc0023b93e31",
+    "vehicle_model": "Chevrolet Silverado 1500",
+    "vehicle_price": 222,
+    "description": "this is a great car",
+    "imageUrl": "https://en.wikipedia.org/wiki/File:%2716_Chevrolet_Silverado_Crew_Cab_(Carrefour_Angrignon).jpg",
+    "__v": 0
+    },
+    {
+    "vehicle_type": [
+    "truck"
+    ],
+    "_id": "5ddaf6b73b66bc0023b93e32",
+    "vehicle_model": "Chevrolet Silverado 1500 Hybrid",
+    "vehicle_price": 554,
+    "description": "this is a great car",
+    "imageUrl": "https://en.wikipedia.org/wiki/File:Chevrolet_Silverado_Hybrid--DC.jpg",
+    "__v": 0
+    },
+    {
+    "vehicle_type": [
+    "truck"
+    ],
+    "_id": "5ddaf6b73b66bc0023b93e33",
+    "vehicle_model": "Chevrolet Silverado 2500",
+    "vehicle_price": 132,
+    "description": "this is a great car",
+    "imageUrl": "https://en.wikipedia.org/wiki/File:Chevrolet_Silverado_2500HD_Regular_Cab_Love%27s.jpg",
+    "__v": 0
+    },
+    {
+    "vehicle_type": [
+    "truck"
+    ],
+    "_id": "5ddaf6b73b66bc0023b93e34",
+    "vehicle_model": "Chevrolet Montana",
+    "vehicle_price": 883,
+    "description": "this is a great car",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/38/2011_montana_1.8_sport.jpg/180px-2011_montana_1.8_sport.jpg",
+    "__v": 0
+    },
+    {
+    "vehicle_type": [
+    "truck"
+    ],
+    "_id": "5ddaf6b73b66bc0023b93e35",
+    "vehicle_model": "Daihatsu Hijet",
+    "vehicle_price": 443,
+    "description": "this is a great car",
+    "imageUrl": "https://en.wikipedia.org/wiki/File:DaihatsuHijet123.jpg",
+    "__v": 0
+    },
+    {
+    "vehicle_type": [
+    "truck"
+    ],
+    "_id": "5ddaf6b73b66bc0023b93e36",
+    "vehicle_model": "Dongfeng Rich",
+    "vehicle_price": 254,
+    "description": "this is a great car",
+    "imageUrl": "https://en.wikipedia.org/wiki/File:Dongfeng_Rich_China_2012-06-02.JPG",
+    "__v": 0
+    }
+    ]
