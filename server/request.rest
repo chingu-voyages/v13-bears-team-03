@@ -1,0 +1,10 @@
+
+
+###
+
+#GET http://localhost:3001/content
+#Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoidXNlcjEiLCJpYXQiOjE1NzQxMDYwNjl9.aWN0n5c3Yuok0pQAZ8oGFQ_GhgrUBcZn3LecKir1K64
+
+POST http://localhost:3001/login?username=admin&password=admin
+###
+GET http://localhost:3001/vehicles

@@ -1,11 +1,11 @@
-  
 import React from 'react'
-import Header from './components/Header'
-import VehicleList from './components/UserLandingPage/VehicleList'
-import './App.css';
 import { BrowserRouter, Route, Switch } from 'react-router-dom'
 import Header from './components/Header'
 import { SignUp, SignIn } from './components/Authentication'
+import Account from './components/Account'
+import VehicleList from './components/UserLandingPage/VehicleList'
+
+
 
 export default () => {
   return (
@@ -18,6 +18,9 @@ export default () => {
         </Route>
         <Route path="/sign-up">
           <SignUp />
+        </Route>
+        <Route path="/account">
+          <Account />
         </Route>
       </Switch>
     </BrowserRouter>

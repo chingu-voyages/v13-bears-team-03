@@ -1,3 +1,10 @@
 import { SignUp, SignIn } from './Authentication'
+import Form from './Form'
+import Layout from './Layout'
 
-export { SignUp, SignIn }
+export {
+    Form,
+    Layout,
+    SignUp,
+    SignIn
+}
